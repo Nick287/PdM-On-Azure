@@ -329,5 +329,5 @@ To monitor device to cloud messages sent from your IoT Edge device to your IoT h
   - In the explorer, click IOT HUB DEVICES and then click .... Click Set IoT Hub Connection String and enter the connection string for the IoT hub that your IoT Edge device connects to in the pop-up window.
   - To find the connection string, click the tile for your IoT hub in the Azure portal and then click Shared access policies. In Shared access policies, click the iothubowner policy and copy the IoT Hub connection string in the iothubowner window.
 - To monitor data arriving at the IoT hub, select View > Command Palette and search for the IoT: Start monitoring D2C message menu command.
-  - The message body value is \Iris-setosa\
+  - The message body value is \Iris-setosa\
 - To stop monitoring data, use the IoT: Stop monitoring D2C message menu command.
