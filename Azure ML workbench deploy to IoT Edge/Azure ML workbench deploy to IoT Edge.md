@@ -9,9 +9,9 @@ In this session We assume you have basic knowledge and has setup below services 
 If haven’t installed & setup, follow this instruction to prepare your development machine: https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module
 - A Azure Container Registry or A Docker Hub account
 
-## Step 1：Setup an IoT Edge Device and push docker image to Edge
+## Step 1：Setup an IoT Edge Device and push docker image to Edge
 
-In this demo we create an Linux Ubuntu with Docker VM first and then follow the iot Edge quick start document setup this VM as IoT Edge environment. after that let's push Azure ML docker image to this edge device  (Note: Please name Azure ML image as irisapp).
+In this demo we create an Linux Ubuntu with Docker VM first and then follow the iot Edge quick start document setup this VM as IoT Edge environment. after that let's push Azure ML docker image to this edge device  (Note: Please name Azure ML image as irisapp).
 
 ### Add registry credentials to Edge runtime
 Add the credentials for your registry to the Edge runtime on the computer where you are running your Edge device. These credentials give the runtime access to pull the container.
@@ -56,7 +56,7 @@ please summit your module to deploy, after that you can check the module running
 
 ## step 2: Through the Http query test Azure ML web service endpoint
 
-In this session I will use Postman to test web service endpoint, before the test please conform your VM（Edge device）there is no firewall blocking the port.
+In this session I will use Postman to test web service endpoint, before the test please conform your VM（Edge device）there is no firewall blocking the port.
 
 Please you POST request follow this required
 - Web service endpoint: http://< IoT Edge IP>:3001/Score
@@ -306,7 +306,7 @@ sudo iotedgectl login --address <your container registry address> --username <us
   - In the Image URI field, enter your image address; for example < your container registry address>/sendmessage:0.0.1-amd64. The full image address can be found from the previous section.
 - Click Save and then Click Next.
 
-In the Specify Routes step, copy the JSON below into the text box. Modules publish all messages to the Edge runtime. Declarative rules in the runtime define where the messages flow. In this tutorial, you need two routes. The first route transports messages from the sendmessage model to the MLmodel module via the "amlInput" endpoint, which is the endpoint configured with the irisapp model. The second route transports messages from the filter module to IoT Hub. In this route, upstream is a special destination that tells Edge Hub to send messages to IoT Hub.
+In the Specify Routes step, copy the JSON below into the text box. Modules publish all messages to the Edge runtime. Declarative rules in the runtime define where the messages flow. In this tutorial, you need two routes. The first route transports messages from the sendmessage model to the ML model module via the "amlInput" endpoint, which is the endpoint configured with the irisapp model. The second route transports messages from the filter module to IoT Hub. In this route, upstream is a special destination that tells Edge Hub to send messages to IoT Hub.
 
 ``` javascript
 {
